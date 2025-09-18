@@ -45,8 +45,8 @@
 * 이 구문은 x가 y보다 작으면 x를, 그렇지 않으면 y를 min에 저장하라는 의미.
 
 # 반복
-* 반복 구조(repetition strucrure) 또는 루프(loop)
-    : 어떤 조건이 성립하는 동안 처리(프로그램 명령문 또는 명령어의 집합)를 반복해 실행하는 것.
+* 반복 구조(repetition strucrure) 또는 루프(loop):
+    * 어떤 조건이 성립하는 동안 처리(프로그램 명령문 또는 명령어의 집합)를 반복해 실행하는 것.
 * While(제어식) 명령문
     : 반복의 대상이 되는 '명령문'을 문법적으로는 '루프 본문'이라 함
 * 사전 판단 반복
@@ -95,9 +95,60 @@ int main(void)
 * while문은 언제 종료 될지 알 수 없는 반복문을 실행할 때 사용.
 * for문은 종료 시점이 명확한 반복문을 실행할 때 사용.
 
+## 다중 루프
+* 반복 안에서 다시 반복할 수 있음
+* 이런 반복을 루프가 중첩되는 수준에 따라 '이중 루프, 삼중 루프' 라고 함.
 
+## 곱셈표
+```c
+#include <stdio.h>
 
+int main(void)
+{
+    printf("----- 곱셈표 -----\n");
 
+    for (int i =1; i <=9; i++)
+    {
+        for (int j = 1; j <= 9; j++)
+            printf("%d X %d = %3d", i, j, i * j);
+        putchar('\n');
+    }
+
+    return 0;
+}
+```
+## 삼각형
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    int n;
+
+    printf("몇 단 삼각형입니까?: ");
+    scanf("%d", &n);
+
+    //이등변 삼각형
+    for (int i =1; i <= n; i++)
+    {
+        for (int j =1; j <= i; j++)
+            putchar('*');
+        putchar('\n');
+    }
+
+    // 삼각형
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = n-1; j > i; j--)
+            putchar(' ');
+        for (int j = 0; j < 2*i+1; j++)
+            putchar('*');
+        putchar('\n');
+    }
+
+    return 0;
+}
+```
 
 
 ## 09-11 강의
