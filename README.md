@@ -3,7 +3,44 @@
 
 ## 09-11 강의
 
+# 01-1 알고리즘
+* 매개변수(Parameta) : 함수를 정의할 때 함수에 전달받은 값을 저장하는 변수.
+* 인수(Argument) : 함수를 사용할 때 함수의 매개변수로 전달할 값.
+* 함수를 호출하는 곳에서 argument를 함수에 전달하면, 함수는 전달받은 인수를 이용해서 함수를 실행한 후 return문으로 결과 값을 호출한 곳으로 보냄.
+* return 값의 자료형이 void인 경우 값을 반환하지 않음.
 
+## 알고리즘의 정의
+어떤 문제를 해결하기 위한 절차로, 명확하게 정의되고 순서가 있는 유한 개의 규칙으로 이루어진 집합
+
+- 올바른 알고리즘이란
+    * '어떠한 경우에도 실행 결과가 똑같이 나오는 것'을 의미.
+    * 만약 알고리즘의 실행 결과가 어떤 경우에는 맞고 어떤 경우에는 틀리면 올바른 알고리즘이라고 할 수 없음
+
+# Hello World
+* "hello world"를 출력하는 c프로그램.
+    ```c
+        #include <stdio.h>
+
+        int main () {
+            printf("hello world\n");
+            return 0;
+        }
+    ```
+* 터미널을 열고 명령 실행
+    ```c
+        $ gcc -o hello hello.c
+    ```
+* 명령 실행시 hello.exe 파일이 생성.
+* 생성된 실행 파일을 다음과 같이 호출
+    ```c
+        $ ./hello
+        PS> .hello
+        >hello
+    ```
+* 오류가 나는 경우 VSCode 재실행
+
+### 한글깨짐시
+* VSCode 오른쪽 밑 UTF-8 클릭 후 인코딩하여 다시 열기 클릭 
 
 ## 09-04 강의
 
@@ -34,13 +71,13 @@
 
 # 코드 블럭
 ```c
-#include <stdio.h>
+    #include <stdio.h>
 
-int main()
-{
-    printf("Hello, world!\n");
-    return 0;
-}
+    int main()
+    {
+        printf("Hello, world!\n");
+        return 0;
+    }
 ```
 
 인라인 코드 블럭 예 : `<br>` 다른 예 : `ctrl`+`A`
